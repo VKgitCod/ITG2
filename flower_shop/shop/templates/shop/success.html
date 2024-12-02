@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Успешное оформление заказа{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <h2>Ваш заказ успешно оформлен!</h2>
+        <p>Спасибо за ваш заказ! Мы свяжемся с вами для подтверждения деталей доставки.</p>
+        <a href="{% url 'catalog' %}" class="btn btn-primary mt-3">Вернуться в каталог</a>
+    </div>
+</div>
+{% endblock %}

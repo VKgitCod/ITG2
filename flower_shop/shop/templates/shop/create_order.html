@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Оформление заказа{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center">Оформление заказа</h2>
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if error %}
+                <div class="alert alert-danger" role="alert">{{ error }}</div>
+            {% endif %}
+            <button type="submit" class="btn btn-success btn-block">Оформить заказ</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
